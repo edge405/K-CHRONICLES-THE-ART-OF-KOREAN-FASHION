@@ -40,5 +40,5 @@ git clone https://github.com/edge405/K-CHRONICLES-THE-ART-OF-KOREAN-FASHION.git
 
 ### Figma Design Reference
 
-To view the initial design layout, visit the Figma link below:  
+To view the initial design layout of my gf, visit the Figma link below:  
 [View Figma Design](https://www.figma.com/design/YFwbbofS2K5gb9EAD1HGOt/di-ko-na-alam-ses?node-id=0-1&node-type=canvas&t=Yv32ENqIE2NOqjy3-0)
