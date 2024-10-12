@@ -1,6 +1,6 @@
 # K-CHRONICLES: The Art of Korean Fashion
 
-I recently assisted my girlfriend with her midterm project, which involved creating a blog website. To ensure the design and development aligned perfectly, I suggested she create the website layout in Figma. This gave me a clear guide when building the website.
+I recently helped my girlfriend with her midterm project, which involved creating a website blog. To ensure everything lined up visually, I suggested she design the website layout in Figma first. This gave me a clear direction when I started building the actual website.
 
 ## Project Setup
 
