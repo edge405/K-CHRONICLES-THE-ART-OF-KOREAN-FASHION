@@ -10,8 +10,8 @@ Follow the steps below to set up and run the project:
 
 ### Prerequisites
 
-- **Git**: If you don’t have Git installed, you can download it [here](https://git-scm.com/downloads).
-- **Visual Studio Code (VS Code)**: Download and install VS Code from [here](https://code.visualstudio.com/download).
+- **Git**: If you don’t have Git installed, you can download it <a href="https://git-scm.com/downloads" target="_blank">here</a>.
+- **Visual Studio Code (VS Code)**: Download and install VS Code from <a href="https://code.visualstudio.com/download" target="_blank">here</a>.
 
 ### Steps
 
