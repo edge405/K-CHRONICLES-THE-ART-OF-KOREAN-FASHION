@@ -1,0 +1,153 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 15px;
+}
+
+.line {
+  height: 0.9px;
+  color: black;
+  background-color: black;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Orelega One";
+  text-align: center;
+}
+
+.title {
+  font-family: "Orelega One";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.title img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.title .home,
+.title .logout {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.blog-posts {
+  margin-bottom: 30px;
+}
+
+.post-container-blogs {
+  margin: 0px 50px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* start latest styles */
+/* Latest Posts Section */
+.latest-posts {
+  padding: 20px;
+  max-width: 100%; /* Adjusted width for alignment */
+  margin: 0 auto; /* Center the section */
+}
+
+/* Post Container */
+.post-container {
+  display: flex; /* Horizontal alignment */
+  overflow-x: auto; /* Enable scrolling */
+  gap: 30px; /* Increased spacing */
+  scrollbar-width: auto;
+  scrollbar-color: #ccc #e8e6e3;
+}
+
+.post-container::-webkit-scrollbar {
+  height: 8px; /* Slightly thinner scrollbar */
+}
+
+.post-container::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 5px;
+}
+
+.post-container::-webkit-scrollbar-track {
+  background-color: #e8e6e3;
+}
+
+/* Post Box */
+.post-box {
+  display: flex;
+  flex: 0 0 auto; /* Maintain consistent size */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* Subtle contrast */
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  width: 280px; /* Adjust width for balance */
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.post-box:hover {
+  transform: scale(0.97); /* Hover effect */
+}
+
+.post-box a {
+  text-decoration: none;
+}
+
+.post-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Button Styles */
+.read-now-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-now-btn:hover {
+  background-color: #555;
+}
+/* end latest styles */

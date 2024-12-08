@@ -1,0 +1,85 @@
+/* General Styles  */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5e8;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Container Styles */
+.latest-posts {
+  padding: 20px;
+}
+
+.post-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Post Box Styles */
+.post-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.post-box a {
+  text-decoration: none;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.post-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.read-now-btn {
+  max-width: 100px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-now-btn:hover {
+  background-color: #333;
+}
