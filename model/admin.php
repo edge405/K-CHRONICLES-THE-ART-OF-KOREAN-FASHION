@@ -1,5 +1,4 @@
 <?php
-include "../config/db.php";
 
 function verifyAccountAdmin($conn, $email, $password)
 {

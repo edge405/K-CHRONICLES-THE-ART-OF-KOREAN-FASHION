@@ -1,85 +1,217 @@
-/* General Styles  */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5e8;
+  background-image: url("../../assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-h2 {
+header {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 15px;
+}
+
+.line {
+  height: 0.9px;
+  color: black;
+  background-color: black;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Orelega One";
   text-align: center;
-  margin: 20px 0;
-  font-size: 24px;
-  color: #333;
+  margin: 0;
 }
 
-/* Container Styles */
-.latest-posts {
-  padding: 20px;
-}
-
-.post-container {
+.title {
+  font-family: "Orelega One";
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Post Box Styles */
-.post-box {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #fafafa;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 250px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
+  margin: 0px 170px;
 }
 
-.post-box a {
+.title img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.title .home,
+.title .logout {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#cl-action a {
+  padding: 4px;
+  background-color: rgb(230, 230, 230);
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+#article {
+  font-family: "Orelega One";
+  margin: 0px 15%;
+}
+#title-flex {
+  font-family: "Orelega One";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4px; /* Adjusts the space between each span */
+  margin: 50px 20%;
+  margin-bottom: 70px;
+  /* border: 1px solid black; */
+}
+#title-flex span {
+  color: #555;
+}
+#title-flex h2 {
+  font-size: 1.7em;
+  margin: 0;
+  color: black;
+}
+
+/* h2 {
+  font-family: "Orelega One";
+  text-align: center;
+} */
+
+/* start action */
+#action {
+  display: flex;
+  justify-content: end;
+  margin-right: 100px;
+}
+#action a {
+  color: blue;
+  margin: 20px 0px 0px 10px;
   text-decoration: none;
 }
 
-.menu-icon {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 20px;
-  color: #333;
+#action #edit:hover {
+  color: blue;
+  text-decoration: underline;
 }
 
-.post-date {
+#action #delete:hover {
+  color: red;
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* end action */
+
+/* start comment styles */
+
+.comment-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  margin: 50px auto;
+  /* border: 1px solid black; */
+  max-width: 800px; /* Optional: limit the max width of the form */
+  border-radius: 10px;
+  background-color: #9999;
+}
+
+.comment-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.comment-form input {
+  flex-grow: 1; /* Allow input to take up available space */
+  padding: 20px;
   font-size: 14px;
-  color: #666;
-  margin-bottom: 10px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px; /* Space between input and button */
+  box-sizing: border-box;
 }
 
-.post-title {
-  font-size: 18px;
-  font-weight: bold;
+.submit-button {
+  background-color: #111;
+  color: #fff;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #222; /* Hover effect */
+}
+
+/* end comment styles */
+
+/* start user comment */
+.comments-section {
+  max-width: 850px;
+  margin: 30px auto;
+}
+
+.comments-section h3 {
+  font-size: 24px;
   color: #333;
+  text-align: center;
   margin-bottom: 20px;
 }
 
-/* Button Styles */
-.read-now-btn {
-  max-width: 100px;
-  padding: 10px 15px;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background-color: black;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Styling for individual comment */
+.comment {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-.read-now-btn:hover {
-  background-color: #333;
+.comment:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Styling for the comment header */
+.comment-header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-author {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.comment-date {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Styling for the comment text */
+.comment-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* end user comment */

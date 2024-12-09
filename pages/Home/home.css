@@ -48,6 +48,39 @@ h1 {
   cursor: pointer;
 }
 
+/* start add new blog */
+#add-blog-center {
+  display: flex;
+  justify-content: center;
+}
+#add-blog-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  max-width: 800px;
+  padding: 50px 300px;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+}
+
+#add-blog-container:hover {
+  background-color: #c6c6c6;
+}
+
+#add-blog {
+  display: flex;
+  color: black;
+}
+#add-blog img {
+  margin-right: 10px;
+}
+
+/* end add new blog */
+/*  */
+
 .blog-posts {
   margin-bottom: 30px;
 }
@@ -82,13 +115,13 @@ h1 {
 }
 
 .post-container::-webkit-scrollbar-thumb {
-  background-color: #aaa;
+  /* background-color: #aaa; */
   border-radius: 5px;
 }
 
-.post-container::-webkit-scrollbar-track {
+/* .post-container::-webkit-scrollbar-track {
   background-color: #e8e6e3;
-}
+} */
 
 /* Post Box */
 .post-box {

@@ -1,0 +1,107 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../../assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 15px;
+}
+
+.line {
+  height: 0.9px;
+  color: black;
+  background-color: black;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Orelega One";
+  text-align: center;
+  margin: 0;
+}
+
+.title {
+  font-family: "Orelega One";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 170px;
+}
+
+.title img {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.title .home,
+.title .logout {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/*  */
+.blog-post-form-container {
+  padding: 20px;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  /* border: 1px solid black; */
+}
+
+.blog-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.blog-post-form label {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.blog-post-form input,
+.blog-post-form select,
+.blog-post-form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.blog-post-form select {
+  background-color: #fff;
+}
+
+.blog-post-form textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #222;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #444;
+}

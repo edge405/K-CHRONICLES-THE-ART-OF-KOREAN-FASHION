@@ -1,19 +1,19 @@
 <?php
 
-function insertBlog($conn, $blog_title, $description, $category, $story)
+function insertBlog($conn, $blog_title, $category, $story)
 {
-    $sql = "INSERT INTO blogs (adminId, blog_title, description, story, category) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO blogs (adminId, blog_title, story, category) VALUES (?, ?, ?, ?)";
 
     if ($stmt = $conn->prepare($sql)) {
         $adminId = 1;
 
-        $stmt->bind_param("issss", $adminId, $blog_title, $description, $story, $category);
+        $stmt->bind_param("isss", $adminId, $blog_title, $story, $category);
 
         if ($stmt->execute()) {
             echo "<script>alert('new blog created successfully');</script>";
             echo "<script>
             setTimeout(function() {
-                window.location.href = 'blog-form.php';
+                window.location.href = 'create-blog.php';
             }, 100); // Redirect after 0.1 seconds
           </script>";
         } else {
@@ -26,14 +26,14 @@ function insertBlog($conn, $blog_title, $description, $category, $story)
     }
 }
 
-function updateBlog($conn, $blogId, $blog_title, $description, $category, $story)
+function updateBlog($conn, $blogId, $blog_title, $category, $story)
 {
     $sql = "UPDATE blogs 
-            SET blog_title = ?, description = ?, category = ?, story = ?
+            SET blog_title = ?, category = ?, story = ?
             WHERE blogId = ?     
     ";
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("ssssi", $blog_title, $description, $category, $story, $blogId);
+        $stmt->bind_param("sssi", $blog_title, $category, $story, $blogId);
         if ($stmt->execute()) {
             echo "<script>alert('updated blog successfully');</script>";
         } else {
@@ -164,8 +164,7 @@ function latestPost($conn)
         $sql = "SELECT 
                 blogId, 
                 adminId, 
-                blog_title, 
-                description, 
+                blog_title,
                 story, 
                 category, 
                 created_at
