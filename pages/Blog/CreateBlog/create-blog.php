@@ -1,6 +1,10 @@
 <?php
+
+session_start();
+include "../../../auth/auth.php";
 include "../../../model/blogs.php";
 include "../../../config/db.php";
+
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $title = $_POST['title'];
@@ -44,25 +48,55 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <hr class="line">
 
     <div class="blog-post-form-container">
-        <form action="create-blog.php" method="post" class="blog-post-form">
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title" placeholder="Enter blog title..." required>
+        <?php
+        if (isset($_SESSION['edit'])) {
+            $blogId = $_GET['id'];
+            $result = fetchBlogsById($conn, $blogId);
+            if ($result && $result->num_rows === 1) {
+                $row = $result->fetch_assoc();
+                echo '
+                    <form action="update.php?id= ' . $blogId . '" method="post" class="blog-post-form">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Enter blog title..." required value="' . htmlspecialchars($row['blog_title']) . '">
 
-            <label for="category">Category</label>
-            <select id="category" name="category" required>
-                <option value="" disabled selected>Select a category...</option>
-                <option value="streetwear">Streetwear</option>
-                <option value="k-culture">K-Culture</option>
-                <option value="analysis">Analysis</option>
-            </select>
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled ' . ($row['category'] == '' ? 'selected' : '') . '>Select a category...</option>
+                            <option value="Streetwear"' . ($row['category'] == 'Streetwear' ? 'selected' : '') . '>Streetwear</option>
+                            <option value="K-culture" ' . ($row['category'] == 'K-culture' ? 'selected' : '') . '>K-Culture</option>
+                            <option value="Analysis"' . ($row['category'] == 'Analysis' ? 'selected' : '') . '>Analysis</option>
+                        </select>
 
-            <label for="story">Story</label>
-            <textarea id="story" name="story" placeholder="Write your story here..." rows="10" required></textarea>
+                        <label for="story">Story</label>
+                        <textarea id="story" name="story" placeholder="Write your story here..." rows="10" required>' . htmlspecialchars($row['story'], ENT_QUOTES, 'UTF-8') . '</textarea>
 
-            <button type="submit" class="submit-button">Post Blog</button>
-        </form>
+                        <button type="submit" class="submit-button">Post Blog</button>
+                    </form>
+                    ';
+            }
+        } else {
+            echo '
+            <form action="create-blog.php" method="post" class="blog-post-form">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Enter blog title..." required>
+
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled selected>Select a category...</option>
+                            <option value="Streetwear">Streetwear</option>
+                            <option value="K-culture" >K-Culture</option>
+                            <option value="Analysis">Analysis</option>
+                        </select>
+
+                        <label for="story">Story</label>
+                        <textarea id="story" name="story" placeholder="Write your story here..." rows="10" required></textarea>
+
+                        <button type="submit" class="submit-button">Post Blog</button>
+                    </form>';
+        }
+        ?>
+
     </div>
-
 
 </body>
 

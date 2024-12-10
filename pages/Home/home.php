@@ -58,7 +58,13 @@ authentication();
     ?>
 
     <section class="latest-posts">
-        <h1>LATEST POST</h1>
+        <?php
+        if (isset($_SESSION['admin'])) {
+            echo '<h1>YOUR LATEST POST</h1>';
+        } else {
+            echo '<h1>LATEST POST</h1>';
+        }
+        ?>
         <div class="post-container">
 
             <?php
@@ -82,7 +88,15 @@ authentication();
     </section>
 
     <section class="blog-posts">
-        <h1>ALL BLOGS</h1>
+
+        <?php
+        if (isset($_SESSION['admin'])) {
+            echo '<h1>YOUR ALL BLOGS</h1>';
+        } else {
+            echo '<h1>ALL BLOGS</h1>';
+        }
+        ?>
+
         <div class="post-container-blogs">
 
             <?php
@@ -91,12 +105,12 @@ authentication();
             if ($result && $result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '
-                    <div class="post-box">
-                        <p class="post-date">December 6, 2024</p>
-                        <h3 class="post-title"> ' . htmlspecialchars($row['blog_title']) . ' </h3>
-                        <a class="read-now-btn">READ NOW</a>
-                    </div>
-                    ';
+            <div class="post-box">
+                <p class="post-date"> ' . convertBlog($row['created_at']) . '</p>
+                <h3 class="post-title">' . htmlspecialchars($row['blog_title']) . '</h3>
+                <a href="../Blog/blog.php?id=' . htmlspecialchars($row['blogId']) . '" class="read-now-btn">READ NOW</a>
+            </div>
+            ';
                 }
             } else {
                 echo "<p>No blogs found.</p>";

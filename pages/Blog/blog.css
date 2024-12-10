@@ -49,12 +49,34 @@ h1 {
   flex-direction: column;
   cursor: pointer;
 }
+#related-posts {
+  text-align: center; /* Center the text */
+}
+
+#related-posts .related-link {
+  display: inline-block; /* Optional: style links as inline-blocks */
+  margin: 5px 0; /* Add spacing between links */
+  color: #007bff; /* Customize link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem; /* Adjust font size */
+}
+
+#related-posts .related-link:hover {
+  color: #4492e6;
+  text-decoration: underline; /* Add hover effect */
+}
+
+#like-comment {
+  display: flex;
+  flex-direction: row;
+}
 
 #cl-action a {
   padding: 4px;
   background-color: rgb(230, 230, 230);
   text-decoration: none;
   border-radius: 2px;
+  margin: 0px 2px;
 }
 
 #article {

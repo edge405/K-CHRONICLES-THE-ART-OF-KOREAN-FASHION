@@ -1,5 +1,5 @@
 <?php
-include "../config/db.php";
+
 
 function insertLike($conn, $blogId, $userId)
 {
