@@ -74,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                     </form>
                     ';
             }
+            unset($_SESSION['edit']);
         } else {
             echo '
             <form action="create-blog.php" method="post" class="blog-post-form">

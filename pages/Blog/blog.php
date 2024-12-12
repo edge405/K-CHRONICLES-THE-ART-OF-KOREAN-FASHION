@@ -114,12 +114,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($result && $result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo '
-                <div id="comment" class="comment">
+                <div class="comment">
                     <div class="comment-header">
                         <p class="comment-author"> ' . htmlspecialchars($row['username']) . ' </p>
                         <p class="comment-date">Posted on: ' . htmlspecialchars(convert($row['date'])) . ' </p>
                     </div>
-                    <p class="comment-text">' . htmlspecialchars($row['comment']) . ' </p>
+                    <p class="comment-text"  id="comment">' . htmlspecialchars($row['comment']) . ' </p>
                 </div>
             ';
             }
