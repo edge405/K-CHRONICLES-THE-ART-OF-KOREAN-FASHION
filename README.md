@@ -1,46 +1,32 @@
 # <p align="center">K-CHRONICLES: The Art of Korean Fashion</p>
 
-#
+###
 
-I recently helped my gf with her midterm project, which involved creating a website blog. To ensure everything lined up visually, I suggested her to design the website layout in Figma first. So that this will gave me a clear direction when I started building the actual website.
+I recently helped my girlfriend with her **final project** for their web development course, and here's the outcome:  
+[**K-CHRONICLES: The Art of Korean Fashion**](https://saylesstial.lovestoblog.com/)
 
-## Project Setup
+This website is a blog platform designed to celebrate the elegance, creativity, and influence of Korean fashion and culture.
 
-Follow the steps below to set up and run the project:
+### **Features**
 
-### Prerequisites
+- **User Registration & Login**:  
+  Users can create an account or log in to access the full features of the platform.
 
-- **Git**: If you don’t have Git installed, you can download it <a href="https://git-scm.com/downloads" target="_blank">here</a>.
-- **Visual Studio Code (VS Code)**: Download and install VS Code from <a href="https://code.visualstudio.com/download" target="_blank">here</a>.
+- **Explore Blogs**:  
+  Dive into curated content categorized into three main themes:
 
-### Steps
+  - **K-Culture**: Exploring the essence of Korean culture and how it influences fashion.
+  - **Analysis**: In-depth reviews and insights into specific trends, styles, and brands.
+  - **Streetwear**: Highlighting the bold and edgy street fashion scene in Korea.
 
-#### 1. Clone the Repository
+- **Engagement Features**:  
+  Users can interact with the content by:
+  - **Liking blogs** to show appreciation.
+  - **Leaving comments** to share their thoughts and start discussions.
 
-Open a terminal window and run the following command to clone the project repository:
-
-```bash
-git clone https://github.com/edge405/K-CHRONICLES-THE-ART-OF-KOREAN-FASHION.git
-```
-
-#### 2. Install the Live Server Extension (if not already installed)
-
-- Open VS Code.
-- Go to the **Extensions** tab (on the left sidebar).
-- Search for **Live Server** and install it.
-
-#### 3. Run the Website
-
-- Open the cloned project folder in VS Code.
-- Navigate to the `Login` folder.
-- Right-click the `login.html` file and select **Open with Live Server**.
-
-#### 4. Login Credentials
-
-- **Username**: nicole
-- **Password**: edjay123
-
-### Figma Design Reference
+Working on this project involved designing the layout in **Figma** to ensure a seamless and visually appealing user experience. From brainstorming ideas to coding the functionality, it was rewarding to see the concept come to life.
 
 To view the initial design layout of my gf, visit the Figma link below:  
 [View Figma Design](https://www.figma.com/design/YFwbbofS2K5gb9EAD1HGOt/di-ko-na-alam-ses?node-id=0-1&node-type=canvas&t=Yv32ENqIE2NOqjy3-0)
+
+For a closer comparison, you can explore the first commit of the repository to see the version that aligns closely with the Figma design.
