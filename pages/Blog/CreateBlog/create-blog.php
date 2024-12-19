@@ -5,6 +5,7 @@ include "../../../auth/auth.php";
 include "../../../model/blogs.php";
 include "../../../config/db.php";
 
+authentication();
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $title = $_POST['title'];
